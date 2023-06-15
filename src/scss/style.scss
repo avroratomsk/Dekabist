@@ -37,6 +37,8 @@ body{
   font-family: $main_font;
   font-size: 12px;
   background-color: $color_01;
+  color: $color_02;
+  line-height: 1.4;
   @media (min-width: 768px) {
     font-size: 14px;
   }
@@ -53,8 +55,22 @@ h2 {
   font-size: 24px;
 }
 
-h1, h2 {
+h3 {
+  margin: 0;
+  font-size: 14px;
+  @media (min-width: 768px) {
+    font-size: 24px;
+  }
+  @media (min-width: 1200px) {
+    font-size: 38px;
+  }
+}
+
+h1, h2, h3 {
   font-weight: 400;
+}
+
+h1, h2 {
   margin: 0 0 15px 0;
   @media (min-width: 768px) {
     margin: 0 0 45px 0;
@@ -75,7 +91,6 @@ h1, h2 {
   background-color: $color_02;
   border-radius: 23px;
   font-size: 12px;
-  line-height: 1.2;
   @media (min-width: 576px) {
     padding: 16px 30px;
     font-size: 14px;
@@ -96,7 +111,6 @@ h1, h2 {
 
 .text_block {
   p {
-    line-height: 1.2;
     margin: 0;
     & + p {
       margin-top: 10px;
@@ -104,6 +118,15 @@ h1, h2 {
         margin-top: 28px;
       }
     }
+  }
+}
+
+.middle_text {
+  @media (min-width: 992px) {
+    margin-top: 0;
+    position: relative;
+    top: 50%;
+    transform: translate(0, -50%);
   }
 }
 
@@ -139,11 +162,21 @@ section {
 #section_about {
   .middle_text {
     margin-top: 15px;
+  }
+}
+
+.services {
+  margin: 0;
+  padding: 0;
+  &__item {
+    padding: 10px 0;
+    list-style: none;
+    border-top: 1px solid $color_02;
+    &:last-child {
+      border-bottom: 1px solid $color_02;
+    }
     @media (min-width: 992px) {
-      margin-top: 0;
-      position: relative;
-      top: 50%;
-      transform: translate(0, -50%);
+      padding: 25px 0;
     }
   }
 }
