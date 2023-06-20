@@ -23,7 +23,8 @@
     "aos": "^2.3.4",
     "bootstrap": "^5.2.3",
     "gulp-cli": "^2.3.0",
-    "normalize.css": "^8.0.1"
+    "normalize.css": "^8.0.1",
+    "tiny-slider": "^2.9.4"
   },
   "devDependencies": {
     "browser-sync": "^2.27.10",

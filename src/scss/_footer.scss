@@ -1,3 +1,19 @@
 .footer {
   flex: 0 0 auto;
+  a {
+    color: $color_01;
+    text-decoration: none;
+  }
+  .footerMenu__list {
+    display: flex;
+    flex-wrap: wrap;
+    flex-flow: column;
+    .footerMenu__item {
+      display: block;
+      padding: 0;
+      & + .footerMenu__item {
+        margin-top: 15px;
+      }
+    }
+  }
 }

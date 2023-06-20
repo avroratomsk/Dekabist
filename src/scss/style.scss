@@ -4,6 +4,8 @@
 @import '../../node_modules/bootstrap/scss/bootstrap-grid';
 // AOS
 @import '../../node_modules/aos/dist/aos.css';
+// tns
+@import '../../node_modules/tiny-slider/dist/tiny-slider.css';
 
 // Шрифты
 // Удалить файл fonts.scss, если произошли какие-то изменения со шрифтами
@@ -38,7 +40,7 @@ body{
   color: $color_02;
   line-height: 1.4;
   min-width: 360px;
-  width: 100vw;
+  width: 100%;
   overflow-x: hidden;
   @media (min-width: 768px) {
     font-size: 14px;
@@ -251,5 +253,65 @@ section {
     display: block;
     max-width: 100%;
     max-height: 100%;
+  }
+}
+
+#section_reviews {
+  .tns-controls {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    button {
+      display: block;
+      background-color: initial;
+      border: 0;
+      margin: 0;
+      padding: 0;
+      font-size: 0;
+      width: 94px;
+      height: 48px;
+      background-position: center;
+      background-repeat: no-repeat;
+      opacity: 0.75;
+      &:hover {
+        opacity: 1;
+      }
+      &:disabled {
+        opacity: 0.2;
+        pointer-events: none;
+      }
+    }
+    button[data-controls="prev"] {
+      background-image: url('@img/arrow_left.svg');
+    }
+    button[data-controls="next"] {
+      background-image: url('@img/arrow_right.svg');
+    }
+  }
+  .review {
+    margin: 20px;
+    position: relative;
+    overflow: hidden;
+    * {
+      display: block;
+      width: 100%;
+    }
+  }
+}
+
+#section_map {
+  padding-left: 20px;
+  padding-right: 20px;
+  .map {
+    overflow: hidden;
+    position: relative;
+    filter: grayscale(1);
+    iframe {
+      display: block;
+      @media (min-width: 992px) {
+        height: 540px;
+      }
+    }
   }
 }

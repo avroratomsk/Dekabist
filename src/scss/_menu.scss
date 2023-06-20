@@ -1,6 +1,11 @@
 .menu {
+    // position: fixed;
+    // top: 0;
+    // left: 0;
+    // right: 0;
     padding: 15px 0;
     background-color: $color_01;
+    // z-index: 100;
     &__container {
         display: flex;
         flex-wrap: wrap;
